@@ -24,7 +24,6 @@ arising when writing manual assembly by the following features:
 * functional-style opcodes: ``mul(1, add(2, 3))`` instead of ``push1 3 push1 2 add push1 1 mul``
 * assembly-local variables: ``let x := add(2, 3)  let y := mload(0x40)  x := add(x, y)``
 * access to external variables: ``function f(uint x) public { assembly { x := sub(x, 1) } }``
-* labels: ``let x := 10  repeat: x := sub(x, 1) jumpi(repeat, eq(x, 0))``
 * loops: ``for { let i := 0 } lt(i, x) { i := add(i, 1) } { y := mul(2, y) }``
 * if statements: ``if slt(x, 0) { x := sub(0, x) }``
 * switch statements: ``switch x case 0 { y := mul(x, 2) } default { y := 0 }``
